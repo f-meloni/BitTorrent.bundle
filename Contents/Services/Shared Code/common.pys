@@ -63,9 +63,9 @@ def fill_episode_object(episode_object, json_item, json_data):
 ################################################################################
 def fill_youtube_video_object(video_object):
     url = video_object.url
-    thumb = 'https://i.ytimg.com/vi/%s/hqdefault.jpg' % youtube_url_validation(url)
+    thumb = 'https://i.ytimg.com/vi/%s/hqdefault.jpg' % youtube_video_url(url)
     video_object.thumb = thumb
     video_object.art = thumb
 
-def youtube_url_validation(url):
+def youtube_video_url(url):
     return url.split("?v=",1)[1]
